@@ -1,0 +1,62 @@
+@media (max-width: 500px) { 
+
+
+
+    .journal__sidebar{
+      width: 70vw;
+    }
+
+    .journal__new-entry {
+      height: 5%;
+      
+    }
+
+    .journal__new-entry i {
+      font-size: 40px;
+    }
+
+    .btn-box {
+      transform: translateY(80vh) translatex(80vw);
+    }
+
+    .journal__sidebar {
+        box-shadow: 10px 15px 0px rgba(0, 0, 0, 0.555);
+        
+    
+    }
+
+    .text-container {
+       display: flex;
+       flex-direction: column;
+
+       
+      }
+    
+    .notes__content {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .notes__textarea {
+      display: flex;
+      min-height: 30vh;
+      min-width: 90vw;
+
+    }
+ 
+    .notes__appbar {
+      display: flex;
+      align-items: center;
+    }
+
+    .profilePhoto {
+      width: 50px;
+    }
+
+    .notes__main-content {
+      overflow-y: scroll;
+      overflow-x: hidden;
+    }
+
+  
+}

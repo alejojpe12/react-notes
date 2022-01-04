@@ -1,0 +1,95 @@
+import React from 'react'
+import {Link} from 'react-router-dom'
+import { useForm } from '../../hooks/useForm'
+import { useDispatch, useSelector } from 'react-redux'
+import { startLoginEmailPassword, startGoogleLogin } from '../../actions/auth'
+
+export const LoginScreen = () => {
+    
+    const dispatch = useDispatch()
+
+    const {loading} = useSelector(state => state.ui)
+
+
+    const[formValues, handleInputChange ] = useForm({
+        email: 'baby34je@gmail.com',
+        password: '123456'
+    })
+
+    const {email, password} = formValues;
+
+        const handleLogin = (e) => {
+            e.preventDefault();
+            dispatch(startLoginEmailPassword (email, password))
+        }
+
+    const handleGoogleLogin = ()=> {
+        dispatch( startGoogleLogin() );
+    }
+    
+
+    return (
+        <>
+            <div id="auth-container" className= {`auth__box-container animate__animated animate__flipInX`}>
+
+            <span className="auth__title">Login</span>
+            <form 
+                onSubmit={handleLogin }
+                // className={ clase }
+            >
+                <input 
+                    type="text"
+                    placeholder="Email"
+                    name="email"
+                    className="auth__input"
+                    autoComplete="off"
+                    value={ email }
+                    onChange={ handleInputChange }
+                />
+
+                <input 
+                    type="password"
+                    placeholder="Password"
+                    name="password"
+                    className="auth__input"
+                    value={ password }
+                    onChange={ handleInputChange }
+                />
+
+                <button
+                    type="Submit"
+                    className="btn btn-primary btn-block"
+                    disabled={ loading }
+                >
+                    Login
+                </button>
+
+                <div className="auth__social-networks">
+                    <p>Login with social networks</p>
+
+                    <div 
+                        className="google-btn"
+                        onClick={handleGoogleLogin}
+                    >
+                        <div className="google-icon-wrapper">
+                            <img className="google-icon" src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg" alt="google button" />
+                        </div>
+                        <p className="btn-text">
+                            <b>Sign in with google</b>
+                        </p>
+                    </div>
+                </div>
+                <Link 
+                    to="/react-notes/auth/register"
+                    className="link"
+              
+                >
+                    Create a new account
+                </Link>
+            </form>
+
+            </div>
+            {/* <a href='https://www.freepik.com/photos/business'>Business photo created by freepik - www.freepik.com</a> */}
+        </>
+    )
+}

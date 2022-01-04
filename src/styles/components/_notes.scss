@@ -1,0 +1,150 @@
+
+
+
+.notes__main-content {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    transition: all .3s ease;    
+}
+
+
+
+.notes__appbar {
+    align-items: center;
+    background-color: $primary;
+    color: $white;
+    display: flex;
+    justify-content: flex-end;
+    padding: 0px 20px 10px 20px;
+}
+
+.notes__appbar span {
+    padding: 10px;
+}
+
+.notes__content {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    // padding: 20px; 
+}
+
+.notes__content input{
+    margin-bottom: 0px;
+    background: rgb(244, 248, 218);
+
+    padding: 20px;
+}
+
+.notes__content textarea{
+    height: 10vh;
+    padding: 20px;
+
+}
+
+
+.notes__title-input, .notes__textarea {
+    border: none;
+
+    &:focus {
+        outline: none;
+    }
+}
+
+.notes__title-input {
+    color: $dark-grey;
+    font-size: 25px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+
+.notes__image img{
+    box-shadow: 5px 5px $dark-grey;
+    height: 150px; 
+    margin-right: 15px;
+}
+
+
+.notes__icon {
+    padding: 0px;
+    font-size: 20px;
+}
+
+
+.container{
+
+  display: flex;
+  justify-content: center;
+  width:50%;
+  margin-left: auto;
+  margin-right: auto;
+  color:black;
+  font-size:1rem;
+  font-family:Arial,Helvetica Neue,Helvetica,sans-serif;
+  padding: 10px;
+  
+}
+p{
+  text-align:center;
+}
+.button{
+  
+  font-size:1.5rem;
+  border:2px solid black;
+  border-radius:100px;
+  width:40px;
+  height:40px;
+  padding:5px;
+  margin: auto;
+  transition: .5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+ 
+}
+
+.icon{
+ position: relative;
+ display: block;
+  top: 50%;
+  transform: translateY(-50%);
+ text-align:center;
+ z-index: -1;
+}
+
+//Hover
+//-----------------------
+.button:hover{
+    width:125px;
+    background-color: red;
+    box-shadow: 0px 5px 5px rgba(0,0,0,0.2);
+    color: rgb(252, 241, 241);
+    z-index: 1;
+  border:2px solid red;
+  transition:.3s;
+}
+
+.button:active{
+    box-shadow: 0px 2px 5px rgba(0,0,0,0.2);
+    transition: .05s
+}
+
+
+
+.text-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height:50vh ;
+    
+  }
+  
+  
+  
+.notes__textarea {
+      border: none;
+      color: $dark-grey;
+      font-size: 20px;
+      flex: 1 1 auto;
+      resize: none;
+      min-height:50vh ;
+  }

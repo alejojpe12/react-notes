@@ -1,0 +1,26 @@
+
+.nothing__main-content {
+    align-items: center;
+
+    color: rgb(221, 213, 213);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    background: rgba(21, 21, 29, 0.979);
+    background-size: 100vw;
+    background-repeat: no-repeat;
+    background-position: right;
+    p {
+        color: rgb(221, 213, 213);
+        font-size: 20px;
+        text-align: center;
+    }
+
+    i {
+        font-size: 40px;
+
+    }
+
+}

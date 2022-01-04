@@ -1,0 +1,33 @@
+body, html {
+    overflow: hidden;
+}
+
+.loading_background {
+    background-color: $primary;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loading_title {
+    color: $light-grey;
+    font-weight: 10;
+
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    .loading_title {
+        animation: App-logo-spin infinite 1s alternate;
+    }
+}
+
+@keyframes App-logo-spin {
+    from {
+       color: white;
+    }
+    to {
+        color: $primary;
+    }
+  }

@@ -1,0 +1,75 @@
+
+
+.auth__main {
+    align-items: center;
+    background-image: url("../../img/wallpaper.jpg");
+    background-size: 100vw;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    height: 100vh;
+    width: 100vw;
+}
+
+.auth__box-container {
+    background-color: rgba(48, 46, 46, 0.233);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+    width: 300px;
+    // backdrop-filter: blur(10px);
+}
+
+.auth__title {
+    color: rgb(0, 0, 0);
+    margin-bottom: 20px;
+    font-size: 25px;
+}
+
+.auth__input {
+    color: $dark-grey;
+    border: 0;
+    margin-bottom: 10px;
+    height: 20px;
+    width: 100%;
+    padding-top: 8px;
+    padding-bottom: 8px ;
+    transition: border-bottom .4s ;
+    background-color: rgba(245, 245, 245, 0.938);
+
+        &:focus {
+        border-bottom: 1px solid $primary;
+        outline: none;
+        }
+}
+
+.auth__social-networks {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    width: 100%;
+}
+
+.auth__alert-error {
+    background-color: red;
+    border-radius: 54px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+    padding: 5px; 
+}
+
+
+@media (max-width: 600px) {
+    .auth__main {
+        background-size: cover;
+        background-position: right bottom;
+
+    }
+}
