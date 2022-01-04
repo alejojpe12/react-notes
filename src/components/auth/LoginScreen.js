@@ -12,8 +12,8 @@ export const LoginScreen = () => {
 
 
     const[formValues, handleInputChange ] = useForm({
-        email: 'baby34je@gmail.com',
-        password: '123456'
+        email: '',
+        password: ''
     })
 
     const {email, password} = formValues;
@@ -35,7 +35,6 @@ export const LoginScreen = () => {
             <span className="auth__title">Login</span>
             <form 
                 onSubmit={handleLogin }
-                // className={ clase }
             >
                 <input 
                     type="text"
